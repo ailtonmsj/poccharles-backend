@@ -16,10 +16,11 @@ spec:
     spec:
       containers:
       - name: backend
-        image: nginx:1.19.8
+        image: ailtonmsj/poccharles-backend:v1
         volumeMounts:
         - name: backend-response
           mountPath: /usr/share/nginx/html
+        imagePullPolicy: Always
       volumes:
       - name: backend-response
         configMap:
